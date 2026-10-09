@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    background-color: #eab308; /* Deep rich yellow */
+    color: #1c1917;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100%;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  /* All headers as multicoloured Red */
+  h1, h2, h3, h4, h5, h6, .header-multicolor-red {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 18%, #dc2626 38%, #ef4444 60%, #b91c1c 82%, #7f1d1d 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-weight: 800;
+    display: inline-block;
+    max-width: 100%;
+    letter-spacing: -0.015em;
+  }
+
+  /* Ensure SVG icons nested inside headers stay clearly visible */
+  h1 svg, h2 svg, h3 svg, h4 svg, h5 svg, h6 svg, .header-multicolor-red svg {
+    -webkit-text-fill-color: initial !important;
+    color: #b91c1c !important;
+  }
+
+  /* Headers inside dark containers */
+  .bg-stone-900 h1, .bg-stone-900 h2, .bg-stone-900 h3, .bg-stone-900 h4,
+  .bg-stone-950 h1, .bg-stone-950 h2, .bg-stone-950 h3, .bg-stone-950 h4 {
+    background: linear-gradient(135deg, #fca5a5 0%, #ef4444 45%, #f87171 85%, #fee2e2 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt;
+  }
+
+  h1, h2, h3, h4, h5, h6, .header-multicolor-red {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: #111827 !important;
+    background-clip: border-box !important;
+    color: #111827 !important;
+  }
+
+  nav, header, footer, .print\:hidden {
+    display: none !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}

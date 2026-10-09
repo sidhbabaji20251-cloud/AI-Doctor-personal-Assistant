@@ -1,0 +1,6 @@
+{
+  "name": "AI Doctor Personal Assistant",
+  "description": "Bilingual AI Doctor Personal Assistant delivering Golwala standard prescriptions, SMC letter pads, verified news for Rajasthan & Himachal, medical college updates, clinical research, and drug substitutes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
